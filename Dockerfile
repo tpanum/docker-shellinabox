@@ -17,8 +17,8 @@ ENV SIAB_VERSION=2.19 \
   SIAB_PKGS=none \
   SIAB_SCRIPT=none
 
-RUN dnf install -y openssh-clients procps-ng sudo shellinabox && \
-    dnf clean all
+RUN /usr/bin/dnf install -y openssh-clients procps-ng sudo shellinabox && \
+    /usr/bin/dnf clean all
 
 EXPOSE 4200
 
