@@ -1,7 +1,7 @@
 FROM fedora:latest
 
 ENV SIAB_VERSION=2.19 \
-  SIAB_USERCSS="Normal:+/usr/share/shellinabox/white-on-black.css,Monochrome:-/usr/share/shellinabox/monochrome.css,Colors:-/usr/share/shellinabox/color.css" \
+  SIAB_USERCSS="Colors:+/usr/share/shellinabox/color.css,Normal:-/usr/share/shellinabox/white-on-black.css,Monochrome:-/usr/share/shellinabox/monochrome.css" \
   SIAB_PORT=4200 \
   SIAB_ADDUSER=true \
   SIAB_USER=guest \
