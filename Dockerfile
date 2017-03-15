@@ -17,7 +17,7 @@ ENV SIAB_VERSION=2.19 \
   SIAB_PKGS=none \
   SIAB_SCRIPT=none
 
-RUN yum install -y epel-release && \
+RUN yum install -y openssh-clients sudo epel-release && \
     yum install -y shellinabox && \
     yum clean all
 
