@@ -1,4 +1,4 @@
-FROM fedora:latest
+FROM centos:7
 
 ENV SIAB_VERSION=2.19 \
   SIAB_USERCSS="Colors:+/usr/share/shellinabox/color.css,Normal:-/usr/share/shellinabox/white-on-black.css,Monochrome:-/usr/share/shellinabox/monochrome.css" \
@@ -17,8 +17,8 @@ ENV SIAB_VERSION=2.19 \
   SIAB_PKGS=none \
   SIAB_SCRIPT=none
 
-RUN dnf install -y openssh-clients procps-ng sudo shellinabox && \
-    dnf clean all
+RUN yum install -y shellinabox && \
+    yum clean all
 
 EXPOSE 4200
 
