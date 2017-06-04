@@ -15,6 +15,7 @@ ENV SIAB_VERSION=2.19 \
   SIAB_SSL=true \
   SIAB_SERVICE=/:LOGIN \
   SIAB_PKGS=none \
+  SIAB_PKGS2=none \
   SIAB_SCRIPT=none
 
 RUN yum install -y openssh-clients sudo epel-release && \

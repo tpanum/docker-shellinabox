@@ -12,8 +12,9 @@ COMMAND="shellinaboxd --debug --no-beep -u shellinabox -g shellinabox -c /var/li
 
 if [ "$SIAB_PKGS" != "none" ]; then
 	set +e
-        dnf install -y ${SIAB_PKGS}
-        dnf clean all
+        yum install -y ${SIAB_PKGS}
+        [[ "$SIAB_PKGS2" != "none" ]] && yum install -y $SIAB_PKGS2
+        yum clean all
 	set -e
 fi
 

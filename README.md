@@ -53,6 +53,7 @@ docker run -p 4200:4200 -e SIAB_PASSWORD=xyz678abc -e SIAB_SUDO=true sspreitzer/
  - **SIAB_SSL** Whether to enable ssl and create certificates on request. Defaults to true.
  - **SIAB_SERVICE** Service strings to use for shellinabox, separated by whitespace. Defaults to local logins */:LOGIN*.
  - **SIAB_PKGS** Packages to be installed before shellinabox starts. Defaults to none.
+ - **SIAB_PKGS2** Packages to be installed before shellinabox starts in an addition step. Defaults to none.
  - **SIAB_SCRIPT** Script to download and run before shellinabox start. SSL verification is disabled. Defaults to none.
 
 # References
