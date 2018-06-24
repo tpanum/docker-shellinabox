@@ -17,9 +17,8 @@ ENV SIAB_USERCSS="Colors:+/usr/share/shellinabox/color.css,Normal:-/usr/share/sh
     SIAB_PKGS2=none \
     SIAB_SCRIPT=none
 
-RUN yum install -y openssh-clients sudo epel-release && \
-    yum install -y shellinabox && \
-    yum erase -y epel-release && \
+RUN yum install -y epel-release centos-release-scl centos-release-scl-rh centos-release-openshift-origin && \
+    yum install -y openssh-clients sudo shellinabox && \
     yum clean all && \
     rm -rf /var/cache/yum
 
