@@ -1,0 +1,12 @@
+sudo: required
+
+services:
+  - docker
+
+script:
+  - docker build -t tpanum/shellinabox .
+  - docker images
+
+deploy:
+  provider: script
+  script: bash docker_push.sh
